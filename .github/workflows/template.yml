@@ -37,6 +37,8 @@ jobs:
         Add any other context about the problem here." > .github/ISSUE_TEMPLATE/bug_report.md
 
     - name: Commit and push changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
